@@ -1,0 +1,15 @@
+version: 1
+project:
+  title: itk-widget
+  id: f41ccc06-86fb-40a1-9346-123c402756e5
+site:
+  title: itk-widget
+  options:
+    logo_text: itk-widget
+    twitter: stevejpurves
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - stevejpurves.curve.space

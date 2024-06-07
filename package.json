@@ -1,0 +1,22 @@
+{
+  "name": "itk-widget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "tsup --watch "
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@myst-theme/providers": "^0.9.4",
+    "myst-common": "^1.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5",
+    "unist-builder": "^4.0.0"
+  }
+}
