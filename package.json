@@ -18,5 +18,11 @@
     "tsup": "^8.1.0",
     "typescript": "^5.4.5",
     "unist-builder": "^4.0.0"
+  },
+  "dependencies": {
+    "@itk-viewer/element": "^0.3.0",
+    "@itk-viewer/io": "^0.1.8",
+    "@shoelace-style/shoelace": "^2.15.1",
+    "remix-utils": "^7.6.0"
   }
 }

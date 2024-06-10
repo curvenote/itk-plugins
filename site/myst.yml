@@ -2,6 +2,8 @@ version: 1
 project:
   title: itk-widget
   id: f41ccc06-86fb-40a1-9346-123c402756e5
+  plugins:
+    - ../dist/itk.plugin.mjs
 site:
   title: itk-widget
   options:
