@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup",
+    "build:plugin": "tsup src/itk.plugin.ts --outDir dist",
+    "build:viewer": "tsup src/viewer.tsx --outDir dist --tsconfig tsconfig.react.json",
+    "build": "npm run build:plugin && npm run build:viewer",
     "dev": "tsup --watch "
   },
   "author": "",
@@ -15,14 +17,13 @@
     "myst-common": "^1.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "remix-utils": "^7.6.0",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5",
-    "unist-builder": "^4.0.0"
-  },
-  "dependencies": {
+    "unist-builder": "^4.0.0",
     "@itk-viewer/element": "^0.3.0",
     "@itk-viewer/io": "^0.1.8",
-    "@shoelace-style/shoelace": "^2.15.1",
-    "remix-utils": "^7.6.0"
-  }
+    "@shoelace-style/shoelace": "^2.15.1"
+  },
+  "dependencies": {}
 }
