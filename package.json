@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:plugin": "tsup src/itk.plugin.ts --outDir dist",
-    "build:viewer": "tsup src/viewer.tsx --outDir dist --tsconfig tsconfig.react.json",
+    "build:plugin": "tsup src/itk.plugin.ts --outDir dist --platform browser",
+    "build:viewer": "tsup src/viewer.tsx --outDir dist --tsconfig tsconfig.react.json --platform browser",
     "build": "npm run build:plugin && npm run build:viewer",
     "dev": "tsup --watch "
   },
