@@ -1,18 +1,21 @@
-import React from "react";
-import type { NodeRenderer } from "@myst-theme/providers";
-import { Viewer } from "./viewer.js";
+import React, { useEffect } from 'react';
+import type { NodeRenderer } from '@myst-theme/providers';
 
 export type ITKView2dDirective = {
-  type: "itkView2d";
+  type: 'itkView2d';
   imagePath: string;
 };
 
-export const ITKView2dRenderer: NodeRenderer = ({
-  node,
-}: {
-  node: ITKView2dDirective;
-}) => {
-  // NOTE this file cannot be added to the plugin yet, but we should write it and we can
-  // add it to a theme build directly
+export const ITKView2dRenderer: NodeRenderer = ({ node }: { node: ITKView2dDirective }) => {
+  const [Viewer, setViewer] = React.useState<any>(null);
+
+  useEffect(() => {
+    const Viewer = React.lazy(() => import('../dist/viewer.mjs') as any); // todo point to built viewer bundle
+    setViewer(Viewer);
+  }, []);
+
+  if (!Viewer) {
+    return <div className="animate-pulse">loading...</div>;
+  }
   return <Viewer imagePath={node.imagePath} />;
 };
